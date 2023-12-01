@@ -1,3 +1,23 @@
-s = '1abc2pqr3stu8vwxa1b2c3d4e5ftreb7uchet'
-numbers = [i for i in s if i.isdigit()]
-print(numbers) 
+
+def getCalibrationValue(line):
+    numbers = [i for i in line if i.isdigit()]
+    first = numbers[0]
+    last = numbers[len(numbers) - 1]
+    return int(first + last)
+
+input = [
+'1abc2',
+'pqr3stu8vwx',
+'a1b2c3d4e5f',
+'treb7uchet',
+]
+
+sum=0
+
+for line in input:
+    calval = getCalibrationValue(line)
+    sum=sum+calval
+
+print(sum)
+
+
