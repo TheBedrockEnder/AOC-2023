@@ -1,0 +1,3 @@
+s = '1abc2pqr3stu8vwxa1b2c3d4e5ftreb7uchet'
+numbers = [i for i in s if i.isdigit()]
+print(numbers) 
