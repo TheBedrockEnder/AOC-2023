@@ -1,23 +1,24 @@
+#Part one
 
+def readFile(filepath):
+    with open(filepath, "r") as f:
+        return [line for line in f.readlines()]
+    
 def getCalibrationValue(line):
     numbers = [i for i in line if i.isdigit()]
     first = numbers[0]
     last = numbers[len(numbers) - 1]
     return int(first + last)
 
-input = [
-'1abc2',
-'pqr3stu8vwx',
-'a1b2c3d4e5f',
-'treb7uchet',
-]
+day1Input = readFile('./AOC-2023/day1_input.txt')
 
 sum=0
 
-for line in input:
+for line in day1Input:
     calval = getCalibrationValue(line)
     sum=sum+calval
 
-print(sum)
+print("Part one anwswer ="+str(sum))
+
 
 
